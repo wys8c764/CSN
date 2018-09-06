@@ -14,9 +14,9 @@ function ndm = csndm(data,alpha,boxsize,normalize)
  boxsize: Size of neighborhood, Default = 0.1
  
  normalize: 1: result is normalized (Default); 0: result is not normalized
-
-
-
+ 
+ 
+ 
 function csn = csnet(data,c,alpha,boxsize,weighted)
  Construction of cell-specific network
  
@@ -35,9 +35,9 @@ function csn = csnet(data,c,alpha,boxsize,weighted)
  csn: Cell-specific network, sparse matrix, rows = genes, columns = genes
  
  Note that too many cells or genes may lead to out of memory.
-
-
-
+ 
+ 
+ 
 function edge = csnedge(gx,gy,boxsize)
 
  The normalized statistic of edge x-y
