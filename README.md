@@ -1,7 +1,7 @@
 # CSN
 Cell-specific network
 
-function ndm = csndm(data,alpha,boxsize,normalize)
+    function ndm = csndm(data,alpha,boxsize,normalize)
 
  Construction of network degree matrix
  
@@ -19,7 +19,7 @@ function ndm = csndm(data,alpha,boxsize,normalize)
     
     
  
-function csn = csnet(data,c,alpha,boxsize,weighted)
+    function csn = csnet(data,c,alpha,boxsize,weighted)
  Construction of cell-specific network
  
  The function performs the transformation from gene expression matrix to cell-specific network (csn).
@@ -42,7 +42,7 @@ function csn = csnet(data,c,alpha,boxsize,weighted)
     
     
  
-function edge = csnedge(gx,gy,boxsize)
+    function edge = csnedge(gx,gy,boxsize)
 
  The normalized statistic of edge x-y
  
