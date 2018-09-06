@@ -1,2 +1,0 @@
-# CSN
-Cell-specific network
