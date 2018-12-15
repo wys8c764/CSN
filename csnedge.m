@@ -4,14 +4,11 @@ function edge = csnedge(gx,gy,boxsize)
 %       If there are n cells, gx and gy are 1-by-n vectors
 %boxsize: Size of neighborhood, Default = 0.1
 %edge: 1-by-n vector, the normalized statistic of edge x-y in all cells
-%
-%Note that if the expression value of gene x or gene y in cell k is 0,
-%edge(k) is always equal to 0, no matter how much the statistic is.
 
 if nargin < 3
     boxsize = 0.1;
 end
-
+ 
 %Define the neighborhood of each plot
 n = length(gx);
 upper = zeros(1,n);
@@ -42,7 +39,7 @@ for i = 1 : 2
     B{i} = bsxfun(@le,g',upper) & bsxfun(@ge,g',lower);
     a(i,:) = sum(B{i});
 end
-
+ 
 %Calculate the normalized statistic of edge x-y in all cells
 edge = (sum(B{1} & B{2})*n-a(1,:).*a(2,:))./sqrt(a(1,:).*a(2,:) ...
-    .*(n-a(1,:)).*(n-a(2,:))/(n-1)).*sign(gx).*sign(gy);
+    .*(n-a(1,:)).*(n-a(2,:))/(n-1));
