@@ -1,5 +1,5 @@
 # CSN
-Cell-specific network
+Cell-specific Network Constructed by Single-cell RNA Sequencing Data
 
     function ndm = csndm(data,alpha,boxsize,normalize)
 
@@ -7,7 +7,7 @@ Cell-specific network
  
  The function performs the transformation from gene expression matrix to network degree matrix (ndm).
  
- data: Gene expression matrix, rows = genes, columns = cells
+ data: Gene expression matrix (TPM/FPKM/RPKM/count), rows = genes, columns = cells
  
  alpha: Significant level (eg. 0.001, 0.01, 0.05 ...), Default = 0.01
  
@@ -34,7 +34,7 @@ Cell-specific network
  
  weighted: 1: edge is weighted; 0: edge is not weighted (Default)
  
- csn: Cell-specific network, sparse matrix, rows = genes, columns = genes
+ csn: Cell-specific network, the kth CSN is in csn{k}, rows = genes, columns = genes
  
  Note that too many cells or genes may lead to out of memory.
  
@@ -47,8 +47,7 @@ Cell-specific network
  The normalized statistic of edge x-y
  
  gx gy: Gene expression values of gene x and gene y. If there are n cells, gx and gy are 1-by-n vectors.
+ 
  boxsize: Size of neighborhood, Default = 0.1
  
  edge: 1-by-n vector, the normalized statistic of edge x-y in all cells
- 
- Note that if the expression value of gene x or gene y in cell k is 0, edge(k) is always equal to 0, no matter how much the statistic is.
