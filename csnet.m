@@ -12,9 +12,9 @@ function csn = csnet(data,c,alpha,boxsize,weighted)
 %          0  edge is not weighted (Default)
 %csn: Cell-specific network, the kth CSN is in csn{k}
 %     rows = genes, columns = genes
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Too many cells or genes may lead to out of memory. %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Too many cells or genes may lead to out of memory.
+
  
 if nargin < 5 || isempty(weighted)
     weighted = 0;
